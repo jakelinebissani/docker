@@ -3,14 +3,14 @@ services:
   db:
     image: mysql:5.7.19
     environment:
-      - MYSQL_DATABASE=loja
+      - MYSQL_DATABASE=legada
       - MYSQL_USER=root
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     volumes:
       - /home/jakeline/git/docker/kubernetes/teste01/volume_mysql
 
   web:
-   image: rafanercessian/aplicacao-loja:v1    
+   image: wordpress
    ports:
      - 8080:80
    depends_on:
