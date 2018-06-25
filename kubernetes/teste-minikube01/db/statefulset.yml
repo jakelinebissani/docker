@@ -25,3 +25,5 @@ spec:
               mountPath: /var/lib/mysql
       volumes:
           - name: volume-mysql
+            persistentVolumeClaim:
+              claimName: config-mysql
